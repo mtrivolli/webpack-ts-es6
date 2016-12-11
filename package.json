@@ -1,0 +1,29 @@
+{
+  "name": "webpack-ts-es6-basic-env",
+  "version": "1.0.0",
+  "description": "Basic environment for webpack, typescript with es6 output and babel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marco Trivolli",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/babel-core": "^6.7.14",
+    "@types/jasmine": "^2.5.37",
+    "babel-core": "^6.18.2",
+    "babel-preset-es2015": "^6.18.0",
+    "jasmine-core": "^2.5.2",
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^1.2.0",
+    "typescript": "^2.0.9",
+    "wallaby-webpack": "0.0.26",
+    "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "@types/react": "^0.14.47",
+    "@types/react-dom": "^0.14.18",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
+}
