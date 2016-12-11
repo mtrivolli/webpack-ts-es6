@@ -1,5 +1,5 @@
 {
-  "name": "webpack-ts-es6-basic-env",
+  "name": "webpack-ts-es6",
   "version": "1.0.0",
   "description": "Basic environment for webpack, typescript with es6 output and babel",
   "main": "index.js",
