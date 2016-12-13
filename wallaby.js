@@ -12,20 +12,24 @@ module.exports = function (wallaby) {
     // as they should not be loaded in browser,
     // their wrapped versions will be loaded instead
     files: [
-      // {pattern: 'lib/jquery.js', instrument: false},
-      {pattern: 'src/**/*.ts', load: false},
-      //{pattern: 'node_modules/es6-promise/auto.js', instrument: false},
+      {pattern: 'node_modules/babel-polyfill/dist/polyfill.js', instrument: false},
+      {pattern: 'src/**/*.ts', load: false}
     ],
 
     tests: [
       {pattern: 'test/**/*.ts', load: false}
-    ],
+    ], 
+    
+    preprocessors: {
+        '**/*.js': file => require('babel-core').transform(
+            file.content,
+            {sourceMap: true, presets: ['es2015']})
+    },
 
     postprocessor: webpackPostprocessor,
     debug: true,
 
     setup: function () {
-      //require('es6-promise').polyfill();
       window.__moduleBundler.loadTests();
     }
   };
