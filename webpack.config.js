@@ -27,11 +27,11 @@ var config = {
         ]
     },
 
-    // plugins: [
-    //     new webpack.ProvidePlugin({
-    //         'Promise': 'es6-promise'
-    //     }),
-    // ],
+    plugins: [
+        new webpack.ProvidePlugin({
+            'Promise': 'es6-promise'
+        }),
+    ],
 
     // When importing a module whose path matches one of the following, just
     // assume a corresponding global variable exists and use that instead.
